@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regex Tester</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    label, p, h2 {
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    input[type="text"], #test-string {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    #test-string {
+      min-height: 100px;
+      background: #fafafa;
+      overflow-y: auto;
+    }
+
+    .highlight {
+      background: #ffff00;
+      font-weight: bold;
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 1rem;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    #result {
+      margin-top: 1rem;
+      background: #eef;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Regex Tester App</h1>
+  <div id="container">
+    <label for="pattern">Regex Pattern:</label>
+    <div id="pattern-container">/
+      <input type="text" id="pattern" name="pattern" placeholder="Enter your regex pattern" />/
+    </div>
+
+    <div id="flags-container">
+      <p>Flags:</p>
+      <label><input type="checkbox" id="i" /> i (ignore case)</label>
+      <label><input type="checkbox" id="g" /> g (global)</label>
+    </div>
+
+    <p>Test String:</p>
+    <div id="test-string" contenteditable="true" placeholder="Enter your test string here..."></div>
+
+    <button class="btn" id="test-btn">Test Regex</button>
+    <button class="btn" id="clear-btn">Clear</button>
+
+    <div id="result-container">
+      <h2>Result:</h2>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    const regexPattern = document.getElementById("pattern");
+    const stringToTest = document.getElementById("test-string");
+    const testButton = document.getElementById("test-btn");
+    const clearButton = document.getElementById("clear-btn");
+    const testResult = document.getElementById("result");
+    const caseInsensitiveFlag = document.getElementById("i");
+    const globalFlag = document.getElementById("g");
+
+    function getFlags() {
+      let flags = "";
+      if (caseInsensitiveFlag.checked) flags += "i";
+      if (globalFlag.checked) flags += "g";
+      return flags;
+    }
+
+    function stripHighlighting(html) {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+      return temp.textContent;
+    }
+
+    function testRegex() {
+      const pattern = regexPattern.value;
+      const flags = getFlags();
+      const rawText = stripHighlighting(stringToTest.innerHTML);
+
+      try {
+        const regex = new RegExp(pattern, flags);
+        const matches = rawText.match(regex);
+
+        if (matches) {
+          const highlighted = rawText.replace(regex, match => `<span class="highlight">${match}</span>`);
+          stringToTest.innerHTML = highlighted;
+          testResult.textContent = `Matched: ${matches.join(", ")} (Total: ${matches.length})`;
+        } else {
+          stringToTest.textContent = rawText;
+          testResult.textContent = "no match";
+        }
+      } catch (e) {
+        testResult.textContent = "Invalid regex pattern";
+        console.error(e);
+      }
+    }
+
+    function clearAll() {
+      regexPattern.value = "";
+      stringToTest.innerHTML = "";
+      testResult.textContent = "";
+      caseInsensitiveFlag.checked = false;
+      globalFlag.checked = false;
+    }
+
+    testButton.addEventListener("click", testRegex);
+    clearButton.addEventListener("click", clearAll);
+  </script>
+</body>
+</html>

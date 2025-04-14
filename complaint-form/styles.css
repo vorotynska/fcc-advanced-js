@@ -1,0 +1,109 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f6f8;
+    color: #333;
+  }
+  
+  form {
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 6px;
+  }
+  
+  /* Стили кнопки */
+  #btn-container {
+    text-align: center;
+  }
+  
+  #submit-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #message-box {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Валидация: */
+  input.valid,
+  textarea.valid {
+    border-color: #28a745;
+  }
+  
+  input.invalid,
+  textarea.invalid {
+    border-color: #dc3545;
+  }
+  
+  fieldset.valid {
+    border-color: #28a745;
+  }
+  
+  fieldset.invalid {
+    border-color: #dc3545;
+  }
+  
