@@ -45,3 +45,14 @@ complaint-form
      For this lab, you'll use JavaScript to validate a customer complaint form.
 
      You'll practice how to validate form inputs, display error messages, and prevent the form from submitting if there are errors.
+
+date-conversion
+     In this lab, you'll build a program to convert a date from one format to another.
+
+music-player
+     In this workshop, you'll code a basic MP3 player using HTML, CSS, and JavaScript.
+
+     The project covers fundamental concepts such as handling audio playback, managing a playlist, implementing play, pause, next, and previous functionalities and dynamically update your user interface based on the current song.
+
+drum-machine
+     For this lab you will use the audio element to build a drum machine.
