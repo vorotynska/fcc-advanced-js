@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#poll-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#options button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#options button:hover {
+    background-color: #45a049;
+}
+
+#voterId {
+    margin-top: 1rem;
+    padding: 8px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#show-results {
+    margin-top: 1rem;
+    background-color: #2196F3;
+}
+
+#show-results:hover {
+    background-color: #0b7dda;
+}
+
+#results {
+    margin-top: 1rem;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    height: auto;
+    min-height: 80px;
+}
+
+/* Плавное появление */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+#progress-bars {
+    margin-top: 1rem;
+}
+
+.progress-container {
+    margin-bottom: 10px;
+}
+
+.progress-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.6s ease-in-out;
+}

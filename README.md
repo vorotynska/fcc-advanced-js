@@ -56,3 +56,11 @@ music-player
 
 drum-machine
      For this lab you will use the audio element to build a drum machine.
+
+plant-catalog
+     In this workshop, you will practice using Maps and Sets by building a plant nursery catalog
+
+voting-syatem
+     In this lab, you'll build a voting system using Maps and Sets.
+
+     You'll practice how to use the Map object to store key-value pairs and the Set object to store unique values.
