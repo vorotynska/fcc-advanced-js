@@ -64,3 +64,11 @@ voting-syatem
      In this lab, you'll build a voting system using Maps and Sets.
 
      You'll practice how to use the Map object to store key-value pairs and the Set object to store unique values.
+
+todo-app
+     Local storage is a web browser feature that lets web applications store key-value pairs persistently within a user's browser. This allows web apps to save data during one session, then retrieve it in a later page session.
+
+     In this workshop, you'll learn how to handle form inputs, manage local storage, perform CRUD (Create, Read, Update, Delete) operations on tasks, implement event listeners, and toggle UI elements.
+
+bookmark-manager
+     You'll utilize local storage to store bookmarks, and practice how to add, remove, and display bookmarks.
