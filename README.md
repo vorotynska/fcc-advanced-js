@@ -72,3 +72,16 @@ todo-app
 
 bookmark-manager
      You'll utilize local storage to store bookmarks, and practice how to add, remove, and display bookmarks.
+
+shopping-cart
+     In this workshop you'll create a shopping cart using JavaScript classes.
+
+     You will practice how to use the this keyword, create class instances, implement methods for data manipulation and more.
+
+idea-board
+     In this lab, you'll build a project idea board using OOP in JavaScript.
+
+     You'll practice how to create classes, add methods to classes, and create instances of classes.
+
+book-account
+     How to work with Classes
