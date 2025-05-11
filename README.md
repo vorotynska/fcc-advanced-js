@@ -85,3 +85,15 @@ idea-board
 
 book-account
      How to work with Classes
+
+decimal-to-binary-convertel
+     In this workshop, you’ll build a decimal-to-binary converter using JavaScript. You’ll practice the fundamental concepts of recursion, explore the call stack, and build out a visual representation of the recursion process through an animation.
+
+recipe
+     Using currying and functional programming by building a recipe ingredient converter application.
+
+sorting-visulizer
+     For this lab, you'll use JavaScript to visualize the steps that the Bubble Sort algorithm takes to reorder an array of integers.
+
+
+  
