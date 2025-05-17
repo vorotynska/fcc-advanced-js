@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App </title>
     <link rel="stylesheet" href="weather.css">
-    <script src="weather.js"></script>
+    <script src="weather.js" defer></script>
 </head>
 
 <body>
     <div class="content-container">
+       <div class="content-inner">
+           <h1 id="location">New York</h1>
 
-        <h1 id="location">New York</h1>
-
-        <div class="temp-container">
-            <p id="main-temperature">14.33<sup>o</sup> C</p>
-        </div>
-        <div class="description"><img src="https://cdn.freecodecamp.org/weather-icons/01n.png" id="weather-icon" />
-            <p id="weather-main">Clear</p>
-        </div>
+           <div class="temp-container">
+                <p id="main-temperature">14.33<sup>0</sup> C</p>
+           </div>
+           <div class="description"><img src="https://cdn.freecodecamp.org/weather-icons/01n.png" id="weather-icon" />
+                <p id="weather-main">Clear</p>
+           </div>
 
 
-        <div class="wind">
-            <p id="wind">Wind: 3.6 m/s</p>
-            <p id="wind-gust">Gusts: N/A</p>
-        </div>
+            <div class="wind">
+                <p id="wind">Wind: 3.6 m/s</p>
+                <p id="wind-gust">Gusts: N/A</p>
+            </div>
 
-        <div class="fill">
-            <p id="humidity">Humidity: 53%</p>
-            <p id="feels-like">Feels Like: 13.2<sup>o</sup> C</p>
-        </div>
+            <div class="fill">
+                <p id="humidity">Humidity: 53%</p>
+                <p id="feels-like">Feels Like: 13.2<sup>o</sup> C</p>
+            </div>
+       </div>
     </div>
+
     <div class="btn-container">
         <label for="city-dropdown">Weather for:</label>
         <select name="option" id="city-dropdown">
