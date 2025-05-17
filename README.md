@@ -95,5 +95,17 @@ recipe
 sorting-visulizer
      For this lab, you'll use JavaScript to visualize the steps that the Bubble Sort algorithm takes to reorder an array of integers.
 
+fcc-authors-page
+     One common aspect of web development is learning how to fetch data from an external API, then work with asynchronous JavaScript.
+
+     In this workshop you will practice how to use the fetch method, dynamically update the DOM to display the fetched data and paginate your data so you can load results in batches.
+
+fcc-forum
+     For this lab you'll practice asynchronous JavaScript by coding your own freeCodeCamp forum leaderboard.
+
+weather-app
+     In this lab you'll build a Weather App using an API
+
+     You'll practice how to fetch data from the API, store and display it on your app.
 
   

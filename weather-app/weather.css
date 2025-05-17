@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsla(235, 100%, 78%, 1);
+    background: linear-gradient(90deg, hsla(235, 100%, 78%, 1) 0%, hsla(222, 77%, 33%, 1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    height: 100vh;
+}
+
+.content-container, .btn-container{
+    width: 90%;
+    max-width: 780px;
+    background-color: #d3d3d3;
+    color: #0b090a;
+    border: 2px solid #0b090a;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+h1 {
+    grid-column: 1 / 3;
+}
+
+.description, .temp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-temperature, #weather-main {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 1rem; 
+}
+
+#get-forecast, #city-dropdown {
+    display: inline-block;
+    cursor: pointer;
+    width: 12rem;
+    background: hsla(186, 33%, 94%, 1);
+   background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+    border-color: #5186AA;
+    border-width: 0.2rem;
+    font-size: 1.3rem;
+}
+
+#get-forecast:hover {
+    transform: scale(1.1);
+    background: hsla(211, 66%, 87%, 1);
+    background: linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 67%, 88%, 1) 50%, hsla(272, 26%, 72%, 1) 100%);
+}
+
+#get-forecast {
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #get-forecast, #city-dropdown {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .content-container {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+
+    h1 {
+        grid-column: 1;
+    }
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App </title>
+    <link rel="stylesheet" href="weather.css">
+    <script src="weather.js"></script>
+</head>
+
+<body>
+    <div class="content-container">
+
+        <h1 id="location">New York</h1>
+
+        <div class="temp-container">
+            <p id="main-temperature">14.33<sup>o</sup> C</p>
+        </div>
+        <div class="description"><img src="https://cdn.freecodecamp.org/weather-icons/01n.png" id="weather-icon" />
+            <p id="weather-main">Clear</p>
+        </div>
+
+
+        <div class="wind">
+            <p id="wind">Wind: 3.6 m/s</p>
+            <p id="wind-gust">Gusts: N/A</p>
+        </div>
+
+        <div class="fill">
+            <p id="humidity">Humidity: 53%</p>
+            <p id="feels-like">Feels Like: 13.2<sup>o</sup> C</p>
+        </div>
+    </div>
+    <div class="btn-container">
+        <label for="city-dropdown">Weather for:</label>
+        <select name="option" id="city-dropdown">
+            <option value=""></option>
+            <option value="new york">New York</option>
+            <option value="los angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="paris">Paris</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="london">London</option>
+        </select>
+        <button type="button" id="get-forecast">Get Forecast</button>
+    </div>
+</body>
+
+</html>
